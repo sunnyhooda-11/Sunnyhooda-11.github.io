@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="description"
+    content="Sunny Hooda - Cybersecurity, IT and Security Portfolio"
+  >
+
+  <title>Sunny Hooda | Cybersecurity & IT</title>
+
+  <style>
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #080808;
+      color: #e8e8e8;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      padding: 18px 8%;
+
+      background: rgba(8, 8, 8, 0.95);
+      border-bottom: 1px solid #222;
+    }
+
+    .logo {
+      color: #00ff9d;
+      font-size: 21px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    nav a {
+      color: #bbb;
+      text-decoration: none;
+      margin-left: 20px;
+      font-size: 14px;
+      transition: 0.25s;
+    }
+
+    nav a:hover {
+      color: #00ff9d;
+    }
+
+    .hero {
+      min-height: 88vh;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      padding: 60px 10%;
+    }
+
+    .terminal {
+      color: #00ff9d;
+      font-family: monospace;
+      font-size: 18px;
+      margin-bottom: 15px;
+    }
+
+    .hero h1 {
+      font-size: clamp(48px, 8vw, 90px);
+      line-height: 1.05;
+      margin-bottom: 10px;
+    }
+
+    .hero h2 {
+      font-size: clamp(25px, 4vw, 43px);
+      color: #777;
+      margin-bottom: 25px;
+    }
+
+    .hero-description {
+      max-width: 720px;
+      color: #aaa;
+      font-size: 18px;
+    }
+
+    .buttons {
+      margin-top: 35px;
+
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .btn {
+      display: inline-block;
+
+      padding: 13px 23px;
+
+      border: 1px solid #00ff9d;
+      border-radius: 5px;
+
+      color: #00ff9d;
+      text-decoration: none;
+
+      transition: 0.25s;
+    }
+
+    .btn:hover {
+      background: #00ff9d;
+      color: black;
+    }
+
+    section {
+      padding: 80px 10%;
+    }
+
+    section h2 {
+      color: white;
+      font-size: 32px;
+      margin-bottom: 35px;
+    }
+
+    section h2 span {
+      color: #00ff9d;
+      font-family: monospace;
+      font-size: 22px;
+    }
+
+    .about-text {
+      color: #aaa;
+      max-width: 850px;
+      font-size: 17px;
+    }
+
+    .skills-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(auto-fit, minmax(210px, 1fr));
+
+      gap: 15px;
+    }
+
+    .skill {
+      background: #111;
+      border-left: 3px solid #00ff9d;
+
+      padding: 15px;
+
+      color: #bbb;
+    }
+
+    .cards {
+      display: grid;
+
+      grid-template-columns:
+        repeat(auto-fit, minmax(260px, 1fr));
+
+      gap: 20px;
+    }
+
+    .card {
+      background: #111;
+      border: 1px solid #222;
+
+      padding: 25px;
+
+      border-radius: 10px;
+
+      transition: 0.25s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      border-color: #00ff9d;
+    }
+
+    .card h3 {
+      color: #00ff9d;
+      margin-bottom: 12px;
+    }
+
+    .card p {
+      color: #999;
+    }
+
+    .card a {
+      color: #00ff9d;
+      text-decoration: none;
+    }
+
+    .certification {
+      background: #111;
+
+      padding: 18px 20px;
+      margin-bottom: 12px;
+
+      border-left: 3px solid #00ff9d;
+    }
+
+    .certification strong {
+      color: white;
+    }
+
+    .certification p {
+      color: #888;
+      margin-top: 4px;
+    }
+
+    .social-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(auto-fit, minmax(220px, 1fr));
+
+      gap: 15px;
+    }
+
+    .social {
+      background: #111;
+
+      border: 1px solid #222;
+      border-radius: 8px;
+
+      padding: 20px;
+
+      text-decoration: none;
+      color: white;
+
+      transition: 0.25s;
+    }
+
+    .social:hover {
+      border-color: #00ff9d;
+      transform: translateY(-4px);
+    }
+
+    .social h3 {
+      color: #00ff9d;
+      margin-bottom: 5px;
+    }
+
+    .social p {
+      color: #888;
+      font-size: 14px;
+    }
+
+    .contact {
+      text-align: center;
+    }
+
+    .contact p {
+      max-width: 650px;
+      margin: auto;
+      color: #999;
+    }
+
+    .contact .buttons {
+      justify-content: center;
+    }
+
+    footer {
+      border-top: 1px solid #222;
+
+      text-align: center;
+
+      padding: 30px;
+
+      color: #555;
+      font-size: 14px;
+    }
+
+    @media (max-width: 760px) {
+
+      nav div:last-child {
+        display: none;
+      }
+
+      section {
+        padding: 60px 7%;
+      }
+
+      .hero {
+        padding: 60px 7%;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+  <nav>
+
+    <div class="logo">
+      Sunny Hooda
+    </div>
+
+    <div>
+
+      <a href="#about">About</a>
+
+      <a href="#skills">Skills</a>
+
+      <a href="#training">Training</a>
+
+      <a href="#certifications">Certifications</a>
+
+      <a href="#profiles">Profiles</a>
+
+      <a href="#contact">Contact</a>
+
+    </div>
+
+  </nav>
+
+
+  <main>
+
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+      <p class="terminal">
+        &gt; hello_world
+      </p>
+
+      <h1>
+        Sunny Hooda.
+      </h1>
+
+      <h2>
+        Cybersecurity & IT.
+      </h2>
+
+      <p class="hero-description">
+
+        Cybersecurity and IT enthusiast developing practical
+        experience in security testing, web application security,
+        network analysis, reconnaissance and security operations.
+
+        I build my skills through hands-on labs, cybersecurity
+        training and continuous technical experimentation.
+
+      </p>
+
+
+      <div class="buttons">
+
+        <a
+          class="btn"
+          href="https://github.com/sunnyhooda-11"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          GitHub
+        </a>
+
+
+        <a
+          class="btn"
+          href="https://www.linkedin.com/in/sunnyhooda11"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          LinkedIn
+        </a>
+
+
+        <a
+          class="btn"
+          href="resume.pdf"
+          target="_blank"
+        >
+          Resume
+        </a>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ABOUT -->
+
+    <section id="about">
+
+      <h2>
+        <span>01.</span>
+        About Me
+      </h2>
+
+      <p class="about-text">
+
+        I'm building my career in cybersecurity and information
+        technology with a focus on practical, hands-on learning.
+
+        My interests include penetration testing, application
+        security, vulnerability assessment, network security,
+        security operations and cybersecurity automation.
+
+        I enjoy understanding how systems behave, how security
+        weaknesses are discovered and how technology can be used
+        to improve security.
+
+      </p>
+
+    </section>
+
+
+
+    <!-- SKILLS -->
+
+    <section id="skills">
+
+      <h2>
+        <span>02.</span>
+        Technical Skills
+      </h2>
+
+
+      <div class="skills-grid">
+
+        <div class="skill">
+          Kali Linux
+        </div>
+
+        <div class="skill">
+          Linux
+        </div>
+
+        <div class="skill">
+          Nmap
+        </div>
+
+        <div class="skill">
+          Burp Suite
+        </div>
+
+        <div class="skill">
+          Wireshark
+        </div>
+
+        <div class="skill">
+          Splunk
+        </div>
+
+        <div class="skill">
+          HTTPX
+        </div>
+
+        <div class="skill">
+          GAU
+        </div>
+
+        <div class="skill">
+          Katana
+        </div>
+
+        <div class="skill">
+          ParamSpider
+        </div>
+
+        <div class="skill">
+          Bash / Zsh
+        </div>
+
+        <div class="skill">
+          Python
+        </div>
+
+        <div class="skill">
+          Windows
+        </div>
+
+        <div class="skill">
+          VirtualBox
+        </div>
+
+        <div class="skill">
+          Reconnaissance
+        </div>
+
+        <div class="skill">
+          Web Application Security
+        </div>
+
+        <div class="skill">
+          Network Analysis
+        </div>
+
+        <div class="skill">
+          Security Fundamentals
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- HANDS-ON TRAINING -->
+
+    <section id="training">
+
+      <h2>
+        <span>03.</span>
+        Hands-On Training
+      </h2>
+
+
+      <div class="cards">
+
+
+        <div class="card">
+
+          <h3>
+            TryHackMe
+          </h3>
+
+          <p>
+
+            Hands-on cybersecurity labs covering networking,
+            Linux, penetration testing, web security and
+            cybersecurity fundamentals.
+
+          </p>
+
+          <br>
+
+          <a
+            href="https://tryhackme.com/p/Sunnyhooda11"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View TryHackMe Profile →
+          </a>
+
+        </div>
+
+
+        <div class="card">
+
+          <h3>
+            Jr Penetration Tester
+          </h3>
+
+          <p>
+
+            Practical training focused on penetration-testing
+            methodology, enumeration, web security and
+            vulnerability assessment.
+
+          </p>
+
+        </div>
+
+
+        <div class="card">
+
+          <h3>
+            Security Tooling
+          </h3>
+
+          <p>
+
+            Hands-on experience with Kali Linux, Nmap,
+            Burp Suite, Wireshark, HTTPX, GAU, Katana,
+            ParamSpider and virtual lab environments.
+
+          </p>
+
+        </div>
+
+
+      </div>
+
+    </section>
+
+
+
+    <!-- CERTIFICATIONS -->
+
+    <section id="certifications">
+
+      <h2>
+        <span>04.</span>
+        Certifications & Training
+      </h2>
+
+
+      <div class="certification">
+
+        <strong>
+          Certified AppSec Practitioner
+        </strong>
+
+        <p>
+          The SecOps Group
+        </p>
+
+      </div>
+
+
+      <div class="certification">
+
+        <strong>
+          Jr Penetration Tester
+        </strong>
+
+        <p>
+          TryHackMe Learning Path
+        </p>
+
+      </div>
+
+
+      <div class="certification">
+
+        <strong>
+          Introduction to Cyber Security
+        </strong>
+
+        <p>
+          TryHackMe Learning Path
+        </p>
+
+      </div>
+
+
+      <div class="certification">
+
+        <strong>
+          Pre Security
+        </strong>
+
+        <p>
+          TryHackMe Learning Path
+        </p>
+
+      </div>
+
+
+      <div class="certification">
+
+        <strong>
+          Certified Ethical Hacker Training
+        </strong>
+
+        <p>
+          CEH Training Completed
+        </p>
+
+      </div>
+
+
+    </section>
+
+
+
+    <!-- SOCIAL PROFILES -->
+
+    <section id="profiles">
+
+      <h2>
+        <span>05.</span>
+        Professional Profiles
+      </h2>
+
+
+      <div class="social-grid">
+
+
+        <a
+          class="social"
+          href="https://www.linkedin.com/in/sunnyhooda11"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+
+          <h3>
+            LinkedIn
+          </h3>
+
+          <p>
+            Professional profile & experience
+          </p>
+
+        </a>
+
+
+
+        <a
+          class="social"
+          href="https://github.com/sunnyhooda-11"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+
+          <h3>
+            GitHub
+          </h3>
+
+          <p>
+            Code & future cybersecurity projects
+          </p>
+
+        </a>
+
+
+
+        <a
+          class="social"
+          href="https://tryhackme.com/p/Sunnyhooda11"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+
+          <h3>
+            TryHackMe
+          </h3>
+
+          <p>
+            Cybersecurity labs & learning
+          </p>
+
+        </a>
+
+
+
+        <a
+          class="social"
+          href="https://x.com/sunnyhooda_11"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+
+          <h3>
+            X / Twitter
+          </h3>
+
+          <p>
+            @sunnyhooda_11
+          </p>
+
+        </a>
+
+
+      </div>
+
+    </section>
+
+
+
+    <!-- CONTACT -->
+
+    <section
+      id="contact"
+      class="contact"
+    >
+
+      <h2>
+        <span>06.</span>
+        Let's Connect
+      </h2>
+
+
+      <p>
+
+        I'm interested in opportunities involving cybersecurity,
+        IT, security operations, technical evaluation and
+        AI-related technical work where I can continue building
+        practical experience.
+
+      </p>
+
+
+      <div class="buttons">
+
+
+        <a
+          class="btn"
+          href="https://www.linkedin.com/in/sunnyhooda11"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          LinkedIn
+        </a>
+
+
+        <a
+          class="btn"
+          href="https://github.com/sunnyhooda-11"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          GitHub
+        </a>
+
+
+        <a
+          class="btn"
+          href="https://tryhackme.com/p/Sunnyhooda11"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          TryHackMe
+        </a>
+
+
+      </div>
+
+    </section>
+
+
+  </main>
+
+
+
+  <footer>
+
+    <p>
+      © 2026 Sunny Hooda
+    </p>
+
+  </footer>
+
+
+</body>
+
+</html>
